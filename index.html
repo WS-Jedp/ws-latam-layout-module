@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Module</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <!--------------------------->
+    <!-- Container for the app -->
+    <div class="container">
+
+        <!----------------------->
+        <!-- Header of the app -->
+        <header class="app__header">
+            <div class="menu__info">
+                <div class="menu__icon">
+                    <div class="menu__icon-line menu__icon-line-1"></div>
+                    <div class="menu__icon-line menu__icon-line-2"></div>
+                    <nav class="menu-nav">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">Map</a></li>
+                            <li><a href="/">My Tickets</a></li>
+                            <li><a href="/">Chat Bot</a></li>
+                            <li><a href="/">Profile</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <h2 class="logo">Layout<span>Module</span></h2>
+            </div>
+
+            <div>
+                <span class="notification">
+                    <div class="notification__amount">1</div>
+                </span>
+            </div>
+        </header>
+        
+        <!------------------------>
+        <!-- Content of the App -->
+        <main class="app">
+            
+            <!------------------------->
+            <!-- Cards of the places -->
+            <section class="app-places">
+                <h1 class="app-places__title">Places</h1>
+                <p class="app-places__description">Discover the new places of your region</p>
+
+                <!-- Grid of cards -->
+                <section class="card-places__grid">
+
+                    <!-- Start of cards -->
+                    <article class="card-places">
+                        <figure>
+                            <img src="" alt="">
+                            <div class="card-places__image-background">
+                                <span>Lupa</span>
+                            </div>
+                        </figure>
+                        <div class="card-places__content">
+                            <h3>Card title</h3>
+                            <p>Card description</p>
+                        </div>
+                        <button class="card-button">Book</button>
+                    </article>
+                    <article class="card-places">
+                        <figure>
+                            <img src="" alt="">
+                            <div class="card-places__image-background">
+                                <span>Lupa</span>
+                            </div>
+                        </figure>
+                        <div class="card-places__content">
+                            <h3>Card title</h3>
+                            <p>Card description</p>
+                        </div>
+                        <button class="card-button">Book</button>
+                    </article>
+                    <article class="card-places">
+                        <figure>
+                            <img src="" alt="">
+                            <div class="card-places__image-background">
+                                <span>Lupa</span>
+                            </div>
+                        </figure>
+                        <div class="card-places__content">
+                            <h3>Card title</h3>
+                            <p>Card description</p>
+                        </div>
+                        <button class="card-button">Book</button>
+                    </article>
+                    <article class="card-places">
+                        <figure>
+                            <img src="" alt="">
+                            <div class="card-places__image-background">
+                                <span>Lupa</span>
+                            </div>
+                        </figure>
+                        <div class="card-places__content">
+                            <h3>Card title</h3>
+                            <p>Card description</p>
+                        </div>
+                        <button class="card-button">Book</button>
+                    </article>
+                    <article class="card-places">
+                        <figure>
+                            <img src="" alt="">
+                            <div class="card-places__image-background">
+                                <span>Lupa</span>
+                            </div>
+                        </figure>
+                        <div class="card-places__content">
+                            <h3>Card title</h3>
+                            <p>Card description</p>
+                        </div>
+                        <button class="card-button">Book</button>
+                    </article>
+                    <article class="card-places">
+                        <figure>
+                            <img src="" alt="">
+                            <div class="card-places__image-background">
+                                <span>Lupa</span>
+                            </div>
+                        </figure>
+                        <div class="card-places__content">
+                            <h3>Card title</h3>
+                            <p>Card description</p>
+                        </div>
+                        <button class="card-button">Book</button>
+                    </article>
+                    <article class="card-places">
+                        <figure>
+                            <img src="" alt="">
+                            <div class="card-places__image-background">
+                                <span>Lupa</span>
+                            </div>
+                        </figure>
+                        <div class="card-places__content">
+                            <h3>Card title</h3>
+                            <p>Card description</p>
+                        </div>
+                        <button class="card-button">Book</button>
+                    </article>
+                    <article class="card-places">
+                        <figure>
+                            <img src="" alt="">
+                            <div class="card-places__image-background">
+                                <span>Lupa</span>
+                            </div>
+                        </figure>
+                        <div class="card-places__content">
+                            <h3>Card title</h3>
+                            <p>Card description</p>
+                        </div>
+                        <button class="card-button">Book</button>
+                    </article>
+                </section>
+
+            </section>
+
+        </main>
+
+
+        <!------------------------->
+        <!-- Contact Form of App -->
+        <footer>
+            <!-- Contact Form of inputs -->
+            <section>
+                <h3>Contact form</h3>
+                <p>Contact us</p>
+                    <form action="" class="contact-form">
+                        <div class="contact-form__inputs">
+                            <div class="form-input">
+                                <label for="email">
+                                    Your Email
+                                </label>
+                                <input required type="text" placeholder="Write your email" id="email">
+                            </div>
+                            <div class="form-input">
+                                <label for="message">
+                                    Your Message
+                                </label>
+                                <input required type="text" placeholder="Write your message" id="email">
+                            </div>
+                        </div>
+                        <button type="submit" class="form-button">Send</button>
+                </form>
+            </section>
+
+            <!-- Chat bot -->
+            <article class="chat-bot__container">
+                <div class="chat-bot">Bot</div>
+            </article>
+        </footer>
+    </div>
+    
+</body>
+</html>

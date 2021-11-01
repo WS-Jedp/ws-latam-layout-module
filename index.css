@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@600&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --color-green: #00FF70;
+    --color-blue: #47B8BF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: var(--color-green);
+}
+
+h1, h2, h3 {
+    font-family: 'Asap', sans-serif;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* -------------------------------------------------- */
+/* ------ Styles for the container of the app ------ */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+}
+
+/* ----------------------------------------------- */
+/* ------ Styles for the Header of the app ------ */
+.app__header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,.1);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    z-index: 999;
+    background: #fff;
+}
+
+
+.menu__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --------------------------------------- */
+/* ------ Styles for the menu icon ------ */
+.menu__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    margin-right: 21px;
+    cursor: pointer;
+}
+.menu__icon:hover .menu-nav {
+    display: flex;
+}
+.menu__icon-line {
+    width: 100%;
+    height: 4px;
+    margin-top: 6px;
+    background-color: #000;
+}
+
+/* --------------------------------------------- */
+/* ------ Styles for the menu navigation ------ */
+.menu-nav {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 42px 0px rgba(0,0,0,.1);
+    width: 300px;
+    padding: 30px;
+    border-radius: 12px;
+    transition: .3s ease-in;
+    z-index: 999;
+}
+
+.menu-nav h3 {
+    margin-bottom: 12px;
+}
+
+.menu-nav li {
+    text-align: center;
+    margin: 12px;
+    transition: .3s ease-in-out;
+}
+
+.menu-nav li:hover {
+    transform: translateX(15px)
+}
+
+.menu-nav:hover {
+    display: flex;
+}
+
+
+/* ----------------------------------------------- */
+/* ------ Styles for the notification icon ------ */
+.notification {
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+
+/* -------------------------------------------- */
+/* ------ Styles for the places section ------ */
+.app-places {
+    width: 100%;
+    padding: 30px;
+}
+
+.app-places__title {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.app-places__description {
+    font-weight: lighter;
+}
+
+    /* ------ Styles for card places grid ------ */
+.card-places__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,  240px);
+    grid-auto-flow: row;
+    grid-gap: 21px;
+    justify-content: center;
+}
+
+
+    /* ------ Styles for the card of places ------ */
+.card-places {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    min-width: 210px;
+    width: 100%;
+    max-width: 300px;
+    min-height: 210px;
+    height: auto;
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,.1);
+    border-radius: 9px;
+    margin: 21px 0px;
+    transition: .3s ease-in-out;
+}
+.card-places:hover {
+    transform: scale(1.05);
+}
+
+    /* ------ Styles for the image of the card of places ------ */
+.card-places figure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120px;
+    background-color:rgba(0,0,0,.1);
+    margin-bottom: 12px;
+}
+.card-places figure img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+.card-places__image-background {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-blue);
+    opacity: 0;
+    color: #fff;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.card-places figure:hover .card-places__image-background {
+    opacity: .8;
+}
+
+    /* ------ Styles for the content of the card of places ------ */
+.card-places__content {
+    width: 100%;
+    margin: 9px 0px;
+}
+.card-places__content h3 {
+    margin-bottom: 3px;
+}
+
+
+    /* ------ Styles for the button of the card of places ------ */
+.card-button {
+    cursor: pointer;
+    padding: 9px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.0);
+    border-radius: 12px;
+    transition: .3s ease-in-out;
+}
+.card-places:hover .card-button {
+    background-color: var(--color-green);
+    color: #fff;
+    box-shadow: -6px 6px 21px 0 rgba(0,0,0,.1);
+}
+
+
+
+/* -------------------------------------- */
+/* ------ Styles for contact form ------ */
+footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px -12px 21px 0px rgba(0,0,0,.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    background: #fff;
+}
+
+
+    /* ------ Styles for contact form inputs ------ */
+.contact-form__inputs {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 12px 0;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin: 6px 0;
+    margin-right: 12px;
+}
+
+.form-input label {
+    font-weight: 500;
+    margin: 3px 0px;
+}
+
+input[type="text"], input[type="number"] {
+    border: 0px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 3px 0px;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid var(--color-green);
+    border-bottom: 1px solid var(--color-green);
+}
+
+    /* ------ Styles for contact form button ------ */
+.form-button {
+    display: block;
+    cursor: pointer;
+    padding: 9px;
+    background-color: #fff;
+    border: 1px solid var(--color-green);
+    border-radius: 12px;
+    transition: .3s ease-in-out;
+}
+.form-button:hover {
+    background-color: var(--color-green);
+    color: #fff;
+    box-shadow: -6px 6px 21px 0 rgba(0,0,0,.1);
+}
+
+    /* ------ Styles for chat bot button ------ */
+.chat-bot__container {
+    margin: 21px 0;
+}
+.chat-bot {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: linear-gradient(15deg, var(--color-blue), var(--color-green));
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: -9px 9px 21px 0 rgba(0,0,0,.1);
+    transition: 0.3s ease-in-out;
+}
+.chat-bot:hover {
+    transform: scale(1.04);
+    box-shadow: -9px 9px 21px 0 rgba(0,0,0,.2);
+}
