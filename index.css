@@ -109,13 +109,18 @@ body {
 }
 
 .menu-nav li {
+    width: 100%;
+    display: block;
     text-align: center;
     margin: 12px;
     transition: .3s ease-in-out;
 }
 
+.menu-nav li a { color: #000; }
+.menu-nav li:hover .menu-nav li a { color: #fff !important;}
 .menu-nav li:hover {
-    transform: translateX(15px)
+    transform: translateX(15px);
+    color: #fff;
 }
 
 .menu-nav:hover {
